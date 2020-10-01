@@ -8,6 +8,11 @@ bot.on('ready', () => {
 
 //LINKS (UPDATE LINKS HERE)
 let rendersLink = "https://bit.ly/2Sczncy";
+let releaseSmash4US;
+let releaseSmash4EU;
+let releaseSmashUlt;
+let moddingServerInvite;
+let moddingServerInvite;
 
 
 
