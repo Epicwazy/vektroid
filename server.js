@@ -8,10 +8,9 @@ bot.on('ready', () => {
 
 //LINKS (UPDATE LINKS HERE)
 let rendersLink = "https://bit.ly/2Sczncy";
-let releaseSmash4US;
-let releaseSmash4EU;
-let releaseSmashUlt;
-let moddingServerInvite;
+let releaseSmash4US = "https://bit.ly/2jeWiCF";
+let releaseSmash4EU = "https://bit.ly/2EO6gJL";
+let releaseSmashUlt = "https://rb.gy/n4ortw";
 let moddingServerInvite;
 
 
@@ -23,16 +22,19 @@ bot.on('messageCreate', (msg) => {
 
         //commands
 
-    } else if (msg.content === "=v who made you?") {
+    } 
+    else if (msg.content === "=v who made you?") {
         bot.createMessage(msg.channel.id, 'yoji is my father');
-
-    } else if (msg.content === "=v where did you come from?") {
+    } 
+    else if (msg.content === "=v where did you come from?") {
         bot.createMessage(msg.channel.id, 'I blinked into existence. A virtual on-switch was flipped, thus I can speak and hear.');
 
-    } else if (msg.content === "=v renders") {
+    } 
+    else if (msg.content === "=v renders") {
         bot.createMessage(msg.channel.id, 'High quality, clean transparent renders of every alt costume: ' + rendersLink);
 
-    } else if (msg.content === "=v help") {
+    }  
+    else if (msg.content === "=v help") {
         bot.createMessage(msg.channel.id, {
             embed: {
                 title: "List of Commands",
@@ -131,7 +133,8 @@ bot.on('messageCreate', (msg) => {
             }
         });
 
-    } else if (msg.content === "=v changelog") {
+    } 
+    else if (msg.content === "=v changelog") {
         bot.createMessage(msg.channel.id, {
             embed: {
                 title: "",
@@ -145,7 +148,8 @@ bot.on('messageCreate', (msg) => {
             }
         });
 
-    } else if (msg.content === "=v newbie") {
+    } 
+    else if (msg.content === "=v newbie") {
         bot.createMessage(msg.channel.id, {
             embed: {
                 title: "",
@@ -169,7 +173,8 @@ bot.on('messageCreate', (msg) => {
             }
         });
 
-    } else if (msg.content === "=v textures") {
+    } 
+    else if (msg.content === "=v textures") {
         bot.createMessage(msg.channel.id, {
             embed: {
                 title: "",
@@ -183,7 +188,8 @@ bot.on('messageCreate', (msg) => {
             }
         });
 
-    } else if (msg.content === "=v s4m") {
+    } 
+    else if (msg.content === "=v sumh" || msg.content === "=v modding server") {
         bot.createMessage(msg.channel.id, {
             embed: {
                 title: "",
@@ -197,21 +203,8 @@ bot.on('messageCreate', (msg) => {
             }
         });
 
-    } else if (msg.content === "=v 552") {
-        bot.createMessage(msg.channel.id, {
-            embed: {
-                title: "",
-                fields: [
-                    {
-                        name: "A tutorial to help you use the 5.5.2 exploit:",
-                        value: "http://bit.ly/2ruUe0a",
-                        inline: true
-                    }
-                ],
-            }
-        });
-
-    } else if (msg.content === "=v msbt") {
+    } 
+    else if (msg.content === "=v msbt") {
         bot.createMessage(msg.channel.id, {
             embed: {
                 title: "",
@@ -279,31 +272,41 @@ bot.on('messageCreate', (msg) => {
                 ],
             }
         });
-    } else if (msg.content === "=v releases") {
+    } 
+    else if (msg.content === "=v releases smash 4") {
         bot.createMessage(msg.channel.id, {
             embed: {
                 fields: [
                     {
-                        name: "US Releases:",
-                        value: "https://bit.ly/2jeWiCF",
+                        name: "SM4SHWAVE US Releases:",
+                        value: releaseSmash4US,
                         inline: true
                     },
                     {
-                        name: "EU Packed:",
-                        value: "https://bit.ly/2HIQj82",
-                        inline: true
-                    },
-                    {
-                        name: "EU Unpacked:",
-                        value: "https://bit.ly/2rgNQXU",
+                        name: "SM4SHWAVE EU Packed:",
+                        value: releaseSmash4EU,
                         inline: true
                     }
                 ],
 
             }
         });
+    }
+    else if (msg.content === "=v releases") {
+        bot.createMessage(msg.channel.id, {
+            embed: {
+                fields: [
+                    {
+                        name: "SMVSHWAVE Horizon Release:",
+                        value: releaseSmashUlt,
+                        inline: true
+                    }
+                ],
 
-    } else if (msg.content === "=v concepts") {
+            }
+        });
+    } 
+    else if (msg.content === "=v concepts") {
         bot.createMessage(msg.channel.id, {
             embed: {
                 title: "Concept Sumbissions Folder Housing All Ideas for Skins / Stages / UI etc.",
