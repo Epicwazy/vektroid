@@ -11,7 +11,9 @@ let rendersLink = "https://bit.ly/2Sczncy";
 let releaseSmash4US = "https://bit.ly/2jeWiCF";
 let releaseSmash4EU = "https://bit.ly/2EO6gJL";
 let releaseSmashUlt = "https://rb.gy/n4ortw";
-let moddingServerInvite;
+let gamebananaLink = "https://gamebanana.com/gamefiles/12654";
+let changelogSheet;
+let moddingServerInvite = "https://discord.gg/ASJyTrZ";
 
 
 
@@ -60,12 +62,7 @@ bot.on('messageCreate', (msg) => {
                         inline: true
                     },
                     {
-                        name: "=v sumh",
-                        value: "---------------------------------",
-                        inline: true
-                    },
-                    {
-                        name: "=v 552",
+                        name: "=v modding",
                         value: "---------------------------------",
                         inline: true
                     },
@@ -96,6 +93,16 @@ bot.on('messageCreate', (msg) => {
                     },
                     {
                         name: "=v releases",
+                        value: "---------------------------------",
+                        inline: true
+                    },
+                    {
+                        name: "=v releases smash 4",
+                        value: "---------------------------------",
+                        inline: true
+                    },
+                    {
+                        name: "=v gamebanana",
                         value: "---------------------------------",
                         inline: true
                     },
@@ -155,18 +162,23 @@ bot.on('messageCreate', (msg) => {
                 title: "",
                 fields: [
                     {
-                        name: "How to Dump your Game:",
-                        value: "https://gamebanana.com/tuts/12528",
+                        name: "Nintendo Switch Modding Guide:",
+                        value: "https://nh-server.github.io/switch-guide/",
                         inline: true
                     },
                     {
-                        name: "How to Setup the Explorer:",
-                        value: "https://gamebanana.com/tools/6294",
+                        name: "Guide to Getting Started Modding Ultimate:",
+                        value: "https://gamebanana.com/tuts/12827",
                         inline: true
                     },
                     {
-                        name: "How to Load Mods:",
-                        value: "http://bit.ly/2ruUe0a",
+                        name: "Texture Editing Guide",
+                        value: "https://gamebanana.com/tuts/13429",
+                        inline: true
+                    },
+                    {
+                        name: "Custom Render Editing Guide:",
+                        value: "https://gamebanana.com/tuts/13434",
                         inline: true
                     },
                 ],
@@ -189,14 +201,14 @@ bot.on('messageCreate', (msg) => {
         });
 
     } 
-    else if (msg.content === "=v sumh" || msg.content === "=v modding server") {
+    else if (msg.content === "=v sumh" || msg.content === "=v modding server" || msg.content === "=v modding" ) {
         bot.createMessage(msg.channel.id, {
             embed: {
                 title: "",
                 fields: [
                     {
-                        name: "Invite to Smash 4 Modding Server:",
-                        value: "https://discord.gg/EUZJhUJ",
+                        name: "Invite to Smash Ultimate Modding Hub Server:",
+                        value: moddingServerInvite,
                         inline: true
                     }
                 ],
@@ -299,6 +311,20 @@ bot.on('messageCreate', (msg) => {
                     {
                         name: "SMVSHWAVE Horizon Release:",
                         value: releaseSmashUlt,
+                        inline: true
+                    }
+                ],
+
+            }
+        });
+    }
+    else if (msg.content === "=v gamebanana") {
+        bot.createMessage(msg.channel.id, {
+            embed: {
+                fields: [
+                    {
+                        name: "Official SMVSHWAVE Gamebanana page:",
+                        value: gamebananaLink,
                         inline: true
                     }
                 ],
