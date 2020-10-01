@@ -159,7 +159,7 @@ bot.on('messageCreate', (msg) => {
     else if (msg.content === "=v newbie") {
         bot.createMessage(msg.channel.id, {
             embed: {
-                title: "",
+                title: "Guides to get started",
                 fields: [
                     {
                         name: "Nintendo Switch Modding Guide:",
@@ -204,7 +204,6 @@ bot.on('messageCreate', (msg) => {
     else if (msg.content === "=v sumh" || msg.content === "=v modding server" || msg.content === "=v modding" ) {
         bot.createMessage(msg.channel.id, {
             embed: {
-                title: "",
                 fields: [
                     {
                         name: "Invite to Smash Ultimate Modding Hub Server:",
@@ -285,7 +284,7 @@ bot.on('messageCreate', (msg) => {
             }
         });
     } 
-    else if (msg.content === "=v releases smash 4") {
+    else if (msg.content === "=v release smash 4") {
         bot.createMessage(msg.channel.id, {
             embed: {
                 fields: [
@@ -304,7 +303,7 @@ bot.on('messageCreate', (msg) => {
             }
         });
     }
-    else if (msg.content === "=v releases") {
+    else if (msg.content === "=v release") {
         bot.createMessage(msg.channel.id, {
             embed: {
                 fields: [
